@@ -1,0 +1,26 @@
+# /etc/conf.d/stemmad: config file for /etc/init.d/stemmad
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/stemma/stemma.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/stemmad"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/stemmad.pid"
+
+# Where to write stemmad data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/stemmad"
+
+# User and group to own stemmad process
+#BITCOIND_USER="stemma"
+#BITCOIND_GROUP="stemma"
+
+# Path to stemmad executable
+#BITCOIND_BIN="/usr/bin/stemmad"
+
+# Nice value to run stemmad under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

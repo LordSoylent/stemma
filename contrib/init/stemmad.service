@@ -1,0 +1,26 @@
+[Unit]
+Description=STEMMA's distributed currency daemon
+After=network.target
+
+[Service]
+User=stemma
+Group=stemma
+
+Type=forking
+PIDFile=/var/lib/stemmad/stemmad.pid
+
+ExecStart=/usr/bin/stemmad -daemon -pid=/var/lib/stemmad/stemmad.pid \
+          -conf=/etc/stemma/stemma.conf -datadir=/var/lib/stemmad
+
+ExecStop=-/usr/bin/stemma-cli -conf=/etc/stemma/stemma.conf \
+         -datadir=/var/lib/stemmad stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

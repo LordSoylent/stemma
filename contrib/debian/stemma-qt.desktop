@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=STEMMA
+Comment=STEMMA P2P Cryptocurrency
+Comment[fr]=STEMMA, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=STEMMA, eşten eşe kriptografik sanal para birimi
+Exec=stemma-qt %u
+Terminal=false
+Type=Application
+Icon=stemma128
+MimeType=x-scheme-handler/stemma;
+Categories=Office;Finance;
